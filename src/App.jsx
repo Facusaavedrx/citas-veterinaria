@@ -1,11 +1,14 @@
 import Header from './components/Header'
+import Formulario from './components/Formulario'
 import ListadoPacientes from './components/ListadoPacientes'
 
 function App () {
   return (
-    <div className='container m-auto'>
+    <div className='container m-auto mt-20'>
       <Header />
-      <div>
+
+      <div className='mt-12 md:flex'>
+        <Formulario />
         <ListadoPacientes />
       </div>
     </div>
