@@ -7,6 +7,7 @@ function Formulario () {
       <p className='text-lg mt-5 text-center mb-10'>
         Agrega pacientes y <span className='text-indigo-600 font-bold'>administralos</span>
       </p>
+
       <form className='bg-white shadow-md rounded-lg py-10 px-5'>
         <fieldset className='mb-5'>
           <label
@@ -92,6 +93,7 @@ function Formulario () {
           value='Agregar paciente'
         />
       </form>
+
     </div>
   )
 }
