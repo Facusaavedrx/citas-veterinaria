@@ -1,6 +1,8 @@
+import { useState, useEffect } from 'react'
+
 function Paciente () {
   return (
-    <div className='m-3 bg-white shadow-md px-5 py-10 rounded-xl'>
+    <div className='mx-5 my-10 bg-white shadow-md px-5 py-10 rounded-xl'>
       <p className='font-bold mb-3 text-gray-700'>
         Mascota: <span className='font-normal normal-case'>Lucy</span>
       </p>
