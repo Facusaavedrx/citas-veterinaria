@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function Formulario () {
+function Formulario ({ pacientes, setPacientes }) {
   const [mascota, setMascota] = useState('')
   const [propietario, setPropietario] = useState('')
   const [email, setEmail] = useState('')
@@ -11,11 +11,26 @@ function Formulario () {
   const handleSubmit = (e) => {
     e.preventDefault()
     if ([mascota, propietario, email, fecha, sintomas].includes('')) {
-      console.log('Hay un cambio vacio')
       setError(true)
     } else {
       setError(false)
+      const objetoPaciente = {
+        mascota,
+        propietario,
+        email,
+        fecha,
+        sintomas
+      }
+      setPacientes([
+        ...pacientes,
+        objetoPaciente
+      ])
     }
+    setMascota('')
+    setPropietario('')
+    setEmail('')
+    setFecha('')
+    setSintomas('')
   }
 
   return (
