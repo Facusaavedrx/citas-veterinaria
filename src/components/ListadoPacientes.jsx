@@ -9,11 +9,6 @@ function ListadoPacientes () {
       </p>
 
       <Paciente />
-      <Paciente />
-      <Paciente />
-      <Paciente />
-      <Paciente />
-      <Paciente />
     </div>
   )
 }
