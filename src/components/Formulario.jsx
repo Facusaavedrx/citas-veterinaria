@@ -26,12 +26,13 @@ function Formulario ({ pacientes, setPacientes }) {
         ...pacientes,
         objetoPaciente
       ])
+
+      setMascota('')
+      setPropietario('')
+      setEmail('')
+      setFecha('')
+      setSintomas('')
     }
-    setMascota('')
-    setPropietario('')
-    setEmail('')
-    setFecha('')
-    setSintomas('')
   }
 
   return (

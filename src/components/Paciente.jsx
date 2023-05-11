@@ -25,7 +25,7 @@ function Paciente ({ pacientes }) {
       </p>
 
       <div
-        className='flex justify-between'
+        className='flex justify-between mt-2'
       >
         <button
           type='button'
