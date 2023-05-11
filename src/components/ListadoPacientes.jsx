@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from 'uuid'
 import Paciente from './Paciente'
 
-function ListadoPacientes ({ pacientes }) {
+function ListadoPacientes ({ pacientes, setPaciente }) {
   return (
     <div className='md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll'>
       {pacientes && pacientes.length
@@ -14,7 +14,7 @@ function ListadoPacientes ({ pacientes }) {
 
             {pacientes.map(paciente => {
               return (
-                <Paciente pacientes={paciente} key={uuidv4()} />
+                <Paciente paciente={paciente} key={uuidv4()} setPaciente={setPaciente} />
               )
             })}
           </>
