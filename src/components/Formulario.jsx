@@ -1,7 +1,7 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Error from './Error'
 
-function Formulario ({ pacientes, setPacientes }) {
+function Formulario ({ pacientes, paciente, setPacientes }) {
   const [mascota, setMascota] = useState('')
   const [propietario, setPropietario] = useState('')
   const [email, setEmail] = useState('')
@@ -34,6 +34,15 @@ function Formulario ({ pacientes, setPacientes }) {
       setSintomas('')
     }
   }
+  useEffect(() => {
+    if (Object.keys(paciente).length > 0) {
+      setMascota(paciente.mascota)
+      setPropietario(paciente.propietario)
+      setEmail(paciente.email)
+      setFecha(paciente.fecha)
+      setSintomas(paciente.sintomas)
+    }
+  })
 
   return (
     <div className='md:w-1/2 lg:w-2/5 mx-5'>
