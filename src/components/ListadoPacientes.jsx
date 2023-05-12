@@ -3,9 +3,6 @@ import { v4 as uuidv4 } from 'uuid'
 import Paciente from './Paciente'
 
 function ListadoPacientes ({ pacientes, setPaciente }) {
-  useEffect(() => {
-    if (pacientes.length > 0) console.log('Nuevo paciente agregado')
-  }, [pacientes])
   return (
     <div className='md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll'>
       {pacientes && pacientes.length
