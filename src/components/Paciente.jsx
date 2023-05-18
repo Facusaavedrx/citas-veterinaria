@@ -1,7 +1,12 @@
-import { useState, useEffect } from 'react'
+function Paciente ({ paciente, setPaciente, eliminarPaciente }) {
+  const { mascota, propietario, email, fecha, sintomas, id } = paciente
 
-function Paciente ({ paciente, setPaciente }) {
-  const { mascota, propietario, email, fecha, sintomas } = paciente
+  const handleEliminar = () => {
+    const respuesta = confirm(`¿Deseas eliminar a ${mascota}?`)
+    if (respuesta) {
+      eliminarPaciente(id)
+    }
+  }
   return (
     <div className='mx-5 my-10 bg-white shadow-md px-5 py-10 rounded-xl'>
       <p className='font-bold mb-3 text-gray-700'>
@@ -38,6 +43,7 @@ function Paciente ({ paciente, setPaciente }) {
         <button
           type='button'
           className='py-2 px-10 bg-red-600 hover:bg-red-700 text-white font-bold uppercase rounded-lg'
+          onClick={handleEliminar}
         >
           Eliminar
         </button>
